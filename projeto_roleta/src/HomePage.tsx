@@ -5,6 +5,7 @@ export default function HomePage() {
     const [rotation, setRotation] = useState(0);
     const [spinning, setSpinning] = useState(false);
 
+
     interface Segment {
         label: string;
         color: string;
@@ -22,7 +23,7 @@ export default function HomePage() {
     const spinRoulette = () => {
         if (spinning) return;
 
-        const newRotation = rotation + Math.floor(360 + Math.random() * 5000);
+        const newRotation = rotation + Math.floor(360 + Math.random() * 10000);
         setRotation(newRotation);
         setSpinning(true);
 
