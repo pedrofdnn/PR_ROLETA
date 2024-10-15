@@ -18,9 +18,22 @@
     transition: 5s;
 }
 
+.point {
+    background: #e3d1d1;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: 15px solid #dde;
+    position: relative;
+    overflow: hidden;
+    transition: 5s;
+    top: -290px;
+}
+
 .segment {
     height: 50%;
-    width: 295px;
+    width: 290px;
     position: absolute;
     clip-path: polygon(100% 0, 50% 100%, 0 0);
     transform: translateX(-50%);
@@ -33,7 +46,7 @@
     font-weight: bold;
     font-family: sans-serif;
     color: #fff;
-    left: 102px;
+    left: 105px;
 }
 
 button {

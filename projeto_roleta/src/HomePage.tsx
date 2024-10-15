@@ -22,11 +22,11 @@ export default function HomePage() {
     const spinRoulette = () => {
         if (spinning) return;
 
-        const newRotation = rotation + Math.floor(360 + Math.random() * 1000);
+        const newRotation = rotation + Math.floor(360 + Math.random() * 5000);
         setRotation(newRotation);
         setSpinning(true);
 
-        setTimeout(() => setSpinning(false), 3000);
+        setTimeout(() => setSpinning(false), 2000);
     };
 
 
@@ -48,6 +48,8 @@ export default function HomePage() {
                         {segment.label}
                     </div>
                 ))}
+            </div>
+            <div className="point">
             </div>
             <button onClick={spinRoulette} disabled={spinning}>
                 Spin
