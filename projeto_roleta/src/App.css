@@ -1,36 +1,44 @@
 .roulette-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-block;
+    margin-top: 2%;
+    position: relative;
+
 }
 
 .roulette {
-    width: 500px;
-    height: 500px;
+    width: 50vmin;
+    height: 50vmin;
     background-color: #ccc;
     border-radius: 50%;
-    border: 15px solid #dde;
+    border: 1.5vmin solid #dde;
     position: relative;
     overflow: hidden;
-    transition: 5s;
+    transition: transform 5s ease-out;
 }
 
 .point {
     background: #e3d1d1;
-    width: 20px;
-    height: 20px;
+    width: 2vmin;
+    height: 2vmin;
     background-color: #ccc;
     border-radius: 50%;
     border: 15px solid #dde;
     position: relative;
     overflow: hidden;
     transition: 5s;
-    top: -290px;
+    top: 47%;
+    left: 47%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
 }
 
 .segment {
     height: 50%;
-    width: 290px;
+    width: 29vmin;
     position: absolute;
     clip-path: polygon(100% 0, 50% 100%, 0 0);
     transform: translateX(-50%);
@@ -39,26 +47,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 2vmin;
     font-weight: bold;
     font-family: sans-serif;
     color: #fff;
-    left: 105px;
+    left: 10.5vmin;
+
 }
 
-.pointer-box {}
+.pointer-box {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vmin;
+    height: auto;
+    z-index: 1;
+
+}
 
 .pointer {
-    width: 15%;
-    position: relative;
-    left: 42.6%;
-    top: -353px;
+    width: 100%;
+    height: auto;
+
 }
 
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 2vmin;
 }
 
 .title {

@@ -48,15 +48,17 @@ export default function HomePage() {
                         {segment.label}
                     </div>
                 ))}
+                
+                <div className="point">
+                </div>
+
             </div>
 
-            <div className="point">
-            </div>
 
             <div className="pointer-box">
                 <img className="pointer" src="./pointer.png" alt="Pointer" />
             </div>
-            
+
             <button onClick={spinRoulette} disabled={spinning}>
                 Spin
             </button>
