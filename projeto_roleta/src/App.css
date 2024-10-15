@@ -49,9 +49,10 @@
 .pointer-box {}
 
 .pointer {
-    width: 10%;
+    width: 15%;
     position: relative;
-    left: 45%;
+    left: 42.6%;
+    top: -353px;
 }
 
 button {

@@ -23,11 +23,11 @@ export default function HomePage() {
     const spinRoulette = () => {
         if (spinning) return;
 
-        const newRotation = rotation + Math.floor(360 + Math.random() * 10000);
+        const newRotation = rotation + Math.floor(360 + Math.random() * 8000);
         setRotation(newRotation);
         setSpinning(true);
 
-        setTimeout(() => setSpinning(false), 2000);
+        setTimeout(() => setSpinning(false), 1000);
     };
 
     return (
@@ -56,6 +56,7 @@ export default function HomePage() {
             <div className="pointer-box">
                 <img className="pointer" src="./pointer.png" alt="Pointer" />
             </div>
+            
             <button onClick={spinRoulette} disabled={spinning}>
                 Spin
             </button>
