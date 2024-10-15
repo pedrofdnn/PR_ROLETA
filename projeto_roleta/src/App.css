@@ -5,9 +5,6 @@
 }
 
 .roulette {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
     width: 500px;
     height: 500px;
     background-color: #ccc;
@@ -53,4 +50,13 @@ button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
 }

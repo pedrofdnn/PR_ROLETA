@@ -29,7 +29,6 @@ export default function HomePage() {
         setTimeout(() => setSpinning(false), 2000);
     };
 
-
     return (
         <div className="roulette-container">
             <div
