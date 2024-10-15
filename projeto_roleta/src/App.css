@@ -46,6 +46,14 @@
     left: 105px;
 }
 
+.pointer-box {}
+
+.pointer {
+    width: 10%;
+    position: relative;
+    left: 45%;
+}
+
 button {
     margin-top: 20px;
     padding: 10px 20px;

@@ -48,7 +48,12 @@ export default function HomePage() {
                     </div>
                 ))}
             </div>
+
             <div className="point">
+            </div>
+
+            <div className="pointer-box">
+                <img className="pointer" src="./pointer.png" alt="Pointer" />
             </div>
             <button onClick={spinRoulette} disabled={spinning}>
                 Spin
