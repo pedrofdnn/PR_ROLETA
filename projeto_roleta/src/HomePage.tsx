@@ -2,6 +2,8 @@ import { useState } from "react";
 import './App.css'
 
 export default function HomePage() {
+    const [rotation, setRotation] = useState(0);
+    const [spinning, setSpinning] = useState(false);
 
     interface Segment {
         label: string;
@@ -9,19 +11,14 @@ export default function HomePage() {
     }
 
     const segments: Segment[] = [
-        { label: '1', color: '#FF0000' },
-        { label: '2', color: '#00FF00' },
-        { label: '3', color: '#0000FF' },
-        { label: '4', color: '#FFFF00' },
-        { label: '5', color: '#FF00FF' },
-        { label: '6', color: '#00FFFF' },
+        { label: '1', color: '#ff4e50' },
+        { label: '2', color: '#0a3740' },
+        { label: '3', color: '#a33c75' },
+        { label: '4', color: '#9de0ad' },
+        { label: '5', color: '#582bf7' },
+        { label: '6', color: '#0094b3' },
     ];
 
-
-    const [rotation, setRotation] = useState(0);
-    const [spinning, setSpinning] = useState(false);
-
-    // função para rolar
     const spinRoulette = () => {
         if (spinning) return;
 
@@ -34,30 +31,27 @@ export default function HomePage() {
 
 
     return (
-        <div>
-            <div className="roulette-container">
-                <div
-                    className="roulette"
-                    style={{ transform: `rotate(${rotation}deg)` }}
-                >
-                    {segments.map((segment, index) => (
-                        <div
-                            key={index}
-                            className="segment"
-                            style={{
-                                backgroundColor: segment.color,
-                                transform: `rotate(${(360 / segments.length) * index}deg)`,
-                            }}
-                        >
-                            {segment.label}
-                        </div>
-                    ))}
-                </div>
-                <button onClick={spinRoulette} disabled={spinning}>
-                    Spin
-                </button>
+        <div className="roulette-container">
+            <div
+                className="roulette"
+                style={{ transform: `rotate(${rotation}deg)` }}
+            >
+                {segments.map((segment, index) => (
+                    <div
+                        key={index}
+                        className="segment"
+                        style={{
+                            backgroundColor: segment.color,
+                            transform: `rotate(${(360 / segments.length) * index}deg)`,
+                        }}
+                    >
+                        {segment.label}
+                    </div>
+                ))}
             </div>
-
+            <button onClick={spinRoulette} disabled={spinning}>
+                Spin
+            </button>
         </div>
     )
 }
